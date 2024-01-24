@@ -7,11 +7,35 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-<img src="img/egg.png" height="153.8" width="108.1"/>
-<img src="img/broke.webp" height="123.9" width="192.0"/>
-<img src="img/horse.jfif" height="150.15" width="188.25"/>
-<img src="img/knight.jfif" height="168.5" width="74.5"/>
-<img src="img/wall.jfif" height="167" width="303"/>
+<div class="row p-5 pb-0">
+    <div class="col"><img id="wall" style="position: relative" src="img/wall.jfif" height="167" width="303"/></div>
+    <div class="row p-5 pt-0">
+        <div class="col"><img id="egg" style="position: relative" src="img/egg.png" height="30.76" width="21.62"/>
+            <img src="img/broke.webp" style="display: none; position: relative" height="123.9" width="192.0"/></div></div>
+    <div class="col"><img id="horse" style="display: none; position: relative" src="img/horse.jfif" height="150.15" width="188.25"/></div>
+    <div class="col"><img id="knight" style="display: none; position: relative" src="img/knight.jfif" height="168.5" width="74.5"/></div>
+</div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+        $("#egg").click(function(){
+            $("#egg").animate({
+            left: '+=100'
+           })
+            $("#broke").animate({
+                left: '+=100'
+            })
+            $("#egg").animate({
+                top: '-=200'
+            })
+            $("#broke").animate({
+                top: '-=200'
+            })
+            $("#egg").animate({
+                left: '+=25',
+                top: '+=200'
+            })
+    });})
+</script>
 </html>
